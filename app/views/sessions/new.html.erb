@@ -1,6 +1,6 @@
 <h1>Login: </h1>
 
-<%= form_for login_path do |f| %>
+<%= form_for @user, url: login_path, method: :post do |f| %>
   <%= f.label :name, "Name: " %>
   <%= f.text_field :name %>
   <br>
@@ -9,3 +9,5 @@
   <br>
   <%=f.submit %>
 <% end %>
+
+<%= link_to "Sign up", new_user_path %>
